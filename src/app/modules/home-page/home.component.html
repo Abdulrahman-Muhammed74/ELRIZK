@@ -1,6 +1,7 @@
 <div class="container-fluid w-90">
   <div class="row w-100 justify-content-between">
     <div class="blank"></div>
+    <!-- left side menu -->
     <div class="col-lg-3 lefSideMenu">
       <div class="d-flex justify-content-between">
         <div class="switchBtns">
@@ -72,8 +73,12 @@
         </button>
       </div>
     </div>
+    <!-- middle content -->
+
     <div class="col-lg-6 content mt-4">
       <div class="d-flex mt-3 justify-content-center w-100">
+        <!-- search -->
+
         <div class="search">
           <div class="searchHeader text-center mt-3">
             <h1>
@@ -97,14 +102,36 @@
           </div>
         </div>
       </div>
+      <!-- Featured Suppliers -->
+
       <div class="supplires mt-5 text-start">
         <div>
           <h4>Featured Suppliers</h4>
-          <div class="row">
-            <img src="assets/images/Frame 1000002954.png" alt="" />
-          </div>
+          <p-carousel
+            [value]="products"
+            [numVisible]="5"
+            [numScroll]="3"
+            [circular]="true"
+            [responsiveOptions]="responsiveOptions"
+          >
+            <ng-template let-product pTemplate="item">
+              <div class="mb-3">
+                <div class="relative mx-auto text-center">
+                  <img
+                    [src]="product.src"
+                    [alt]="product.name"
+                    class="w-full border-round"
+                  />
+                </div>
+              </div>
+              <div class="mb-3 productTittle">
+                {{ product.name }}
+              </div>
+            </ng-template>
+          </p-carousel>
         </div>
       </div>
+      <!--market-->
       <div class="market mt-4">
         <div>
           <div class="row">
@@ -112,6 +139,8 @@
           </div>
         </div>
       </div>
+      <!--deals-->
+
       <div class="Deals mt-4">
         <div class="d-flex justify-content-between">
           <h4>Exclusive Deals</h4>
@@ -174,6 +203,8 @@
           </div>
         </div>
       </div>
+      <!--outler-->
+
       <div class="Outlet mt-4 mb-3">
         <div class="d-flex justify-content-between">
           <h4>Outlet</h4>
@@ -253,8 +284,12 @@
           </div>
         </div>
       </div>
-      <div class="text-center footer mb-3">© 2024 Parsmercato. All rights reserved.</div>
+      <div class="text-center footer mb-3">
+        © 2024 Parsmercato. All rights reserved.
+      </div>
     </div>
+    <!-- right side menu -->
+
     <div class="col-lg-3 rightSideMenu">
       <div class="bar mb-1">
         <img src="assets/images/doubleArrowR.png" alt="" />

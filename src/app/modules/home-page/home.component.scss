@@ -1,4 +1,4 @@
-@import "../../../styles.scss";
+// @import "../../../styles.scss";
 .blank {
   width: 97%;
   height: 20px;
@@ -255,4 +255,28 @@
   font-size: 12px;
   font-weight: 400;
   color: rgba(18, 10, 22, 0.4);
+}
+.productTittle {
+  color: rgba(18, 10, 22, 0.4);
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+}
+::ng-deep {
+  .p-carousel-prev,
+  .p-carousel-next {
+    background-color: rgb(241, 239, 239) !important;
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    box-shadow: 0px 1px 4px 0px #0c0c0d0d;
+  }
+  .p-carousel-indicators .p-link {
+    border-radius: 10px;
+    height: 4px;
+    width: 20px;
+  }
+  .p-highlight .p-link {
+    background-color: rgb(182, 100, 219) !important;
+  }
 }

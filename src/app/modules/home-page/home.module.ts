@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-
+import { CarouselModule } from 'primeng/carousel';
 @NgModule({
   declarations: [HomeComponent],
-  imports: [CommonModule, HomeRoutingModule],
+  imports: [CommonModule, HomeRoutingModule, CarouselModule],
   exports: [HomeComponent],
 })
 export class HomeModule {}
