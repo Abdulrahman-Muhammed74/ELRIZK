@@ -1,3 +1,4 @@
+import { HomeService } from './../../core/services/home.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,55 +8,28 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   isMenuHidden = false;
-  products = [
-    {
-      src: 'assets/images/mechanic.png',
-      name: 'Magneti Maerlli',
-    },
-    {
-      src: 'assets/images/Ellipse 576 (1).png',
-      name: 'NK Gas Springs',
-    },
-    {
-      src: 'assets/images/Ellipse 576 (2).png',
-      name: 'Valeo Stock',
-    },
-    {
-      src: 'assets/images/autoparts.png',
-      name: 'Search SKU',
-    },
-    {
-      src: 'assets/images/Ellipse 576 (3).png',
-      name: 'Search SKU',
-    },
-    {
-      src: 'assets/images/mechanic.png',
-      name: 'Magneti Maerlli',
-    },
-    {
-      src: 'assets/images/Ellipse 576 (1).png',
-      name: 'NK Gas Springs',
-    },
-    {
-      src: 'assets/images/Ellipse 576 (2).png',
-      name: 'Valeo Stock',
-    },
-    {
-      src: 'assets/images/autoparts.png',
-      name: 'Search SKU',
-    },
-    {
-      src: 'assets/images/Ellipse 576 (3).png',
-      name: 'Search SKU',
-    },
-  ];
+  vendorWidgets: any;
+
+  products: any;
 
   responsiveOptions: any[] | undefined;
-  constructor() {}
+  token: any;
+  constructor(private homeService: HomeService) {}
+  ngOnInit() {
+    let userData = JSON.parse(localStorage.getItem('userData') || '{}');
+    this.token = userData.token;
+    this.getWidgets();
+  }
 
   toggleMenu() {
     this.isMenuHidden = !this.isMenuHidden;
+  }
+
+  getWidgets() {
+    this.homeService.getVendorWidgets(this.token).subscribe((res: any) => {
+      this.products = res;
+    });
   }
 }

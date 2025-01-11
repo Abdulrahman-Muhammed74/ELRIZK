@@ -1,0 +1,89 @@
+.lefSideMenu {
+  width: 273px;
+  // height: 692px;
+  background-color: white;
+
+  padding: 16px;
+  margin-left: 22px;
+  border: 0px 1px 0px 0px;
+}
+.switchBtns {
+  width: 126px;
+  height: 37px;
+  padding: 4px;
+  border-radius: 12px;
+  background-color: rgba(239, 242, 247, 1);
+  justify-content: center;
+  align-items: center;
+}
+.switchBtns button {
+  border: none;
+}
+.buyer,
+.seller {
+  border-radius: 8px;
+  width: 58px;
+  height: 29px;
+  padding: 4px 8px 5px 8px;
+  font-size: 15px;
+  font-weight: 400;
+}
+.buyer {
+  background-color: white;
+}
+.seller {
+  color: rgba(18, 10, 22, 0.4);
+}
+.title {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8);
+}
+.quickAccess {
+  width: 241px;
+  height: 184px;
+}
+.card {
+  width: 75px;
+  height: 75px;
+  border-radius: 12px;
+  background-color: rgba(239, 242, 247, 1);
+  border: none;
+  margin-right: 7px;
+  align-items: center;
+  justify-content: center;
+}
+.card .label {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 6px;
+}
+.card img {
+  width: 25px;
+  height: 24px;
+}
+.subscTitle {
+  font-size: 15px;
+  font-weight: 500;
+}
+.contactUs {
+  width: 241px;
+  height: 41px;
+  padding: 10px;
+  border-radius: 16px;
+  background-color: rgba(239, 242, 247, 1);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.contactUs button {
+  border: none;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.arrow-right {
+  position: absolute;
+  right: 20px;
+}

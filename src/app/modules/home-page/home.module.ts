@@ -4,9 +4,10 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { CarouselModule } from 'primeng/carousel';
+import { SharedModule } from "../../shared/shared.module";
 @NgModule({
   declarations: [HomeComponent],
-  imports: [CommonModule, HomeRoutingModule, CarouselModule],
+  imports: [CommonModule, HomeRoutingModule, CarouselModule, SharedModule],
   exports: [HomeComponent],
 })
 export class HomeModule {}
