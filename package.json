@@ -5,7 +5,6 @@
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.config.json",
     "build": "ng build --proxy-config proxy.config.json",
-    "build:deploy": "ng build --configuration production --output-path docs --base-href /ELRIZK/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
