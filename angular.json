@@ -71,13 +71,13 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "options": {
-            "proxyConfig": "proxy.config.json"
-          },
+          
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "EL-RIZK-CRM:build:production"
+              "buildTarget": "EL-RIZK-CRM:build:production",
+              "proxyConfig": "proxy.config.json"
+
             },
             "development": {
               "buildTarget": "EL-RIZK-CRM:build:development"
