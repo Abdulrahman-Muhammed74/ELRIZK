@@ -1,11 +1,13 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class HomeService {
-  baseUrl = '/api/Home/';
+  private baseUrl = environment.apiBaseUrl;
+
   constructor(private http: HttpClient) {}
 
   getVendorWidgets(token: any) {
@@ -14,7 +16,7 @@ export class HomeService {
     });
 
     return this.http.post(
-      `${this.baseUrl}GetVendorWidgetTypes`,
+      `${this.baseUrl}/Home/GetVendorWidgetTypes`,
       {},
       { headers }
     );
